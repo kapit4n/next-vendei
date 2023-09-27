@@ -1,7 +1,16 @@
+import { useContext } from 'react';
 import styles from '../styles/components/Products.module.css';
+import OrderContext from './OrderContext';
 
 
-const Products = ({products}) => {
+const Products = ({ products }) => {
+
+    const { setOrderPrice } = useContext(OrderContext);
+
+    const onChangeOrderPrice = (price) => {
+        setOrderPrice(prevVal => prevVal + price)
+    }
+
     return (
         <>
             <h2>Product List</h2>
@@ -13,7 +22,7 @@ const Products = ({products}) => {
                             {product.name}
                         </h2>
                         <div>{product.price}$</div>
-                        <button>ORDER NOW</button>
+                        <button onClick={() => onChangeOrderPrice(product.price)}>ORDER NOW</button>
                     </div>
                 ))}
             </div>
