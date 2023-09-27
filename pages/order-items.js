@@ -8,9 +8,9 @@ export default function OrderProducts() {
 
     return (
         <div className={styles.container}>
-            I should display all products selected
+            I should display all items selected
             <ul>
-                {orderInfo.products.map(product => (
+                {orderInfo.items.map(product => (
                     <li>
                         <img src={product.Product.img} height={100} />
                         {product.Product.name}

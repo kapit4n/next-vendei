@@ -5,10 +5,10 @@ import Head from 'next/head'
 import styles from "../styles/components/Layout.module.css"
 
 const Layout = ({ children }) => {
-    const [orderInfo, updateOrderInfo] = useState({ products: [], totalPrice: 0 });
+    const [orderInfo, updateOrderInfo] = useState({ items: [], totalPrice: 0 });
 
     const resetorderPrice = () => {
-        updateOrderInfo({ products: [], totalPrice: 0 })
+        updateOrderInfo({ items: [], totalPrice: 0 })
     }
 
     const displayCartInfo = () => {
@@ -18,10 +18,10 @@ const Layout = ({ children }) => {
     return (
         <div className={styles.layout}>
             <Head>
-                <title>My page title</title>
+                <title>Restaurant NEXT</title>
             </Head>
             <OrderContext.Provider value={{ orderInfo, updateOrderInfo }}>
-                <h1>Restaurant App</h1>
+                <h1>Restaurant NEXT</h1>
                 <div className={styles.navbar}>
                     <div>Order Price (<span onClick={displayCartInfo} className={styles.cartInfo}>{orderInfo?.totalPrice}</span>)</div>
                     <button onClick={resetorderPrice}>SUBMIT</button>

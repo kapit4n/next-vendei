@@ -7,16 +7,15 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.items}>
                 <button>
-                    <Link href={"/"}>Order</Link>
+                    <Link href={"/"}>Menu</Link>
                 </button>
                 <button>
-                <Link href={"/order-products"}>Products</Link>
+                <Link href={"/order-items"}>Items</Link>
                 </button>
                 
                 <button>
                     Categories
                 </button>
-
             </div>
         </footer>
     )

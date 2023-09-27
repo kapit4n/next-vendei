@@ -1,23 +1,24 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import Products from '../components/Products';
+import Items from '../components/Items';
+import { ItemsService } from '../services/ItemsService';
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/productPresentations')
-  const products = await res.json()
+  const itemService = new ItemsService();
+  const items = await itemService.list()
 
   return {
     props: {
-      products,
+      items,
     }
   }
 }
 
-export default function Home({ products }) {
+export default function Home({ items }) {
 
   return (
     <div className={styles.container}>
-      <Products products={products} />
+      <Items items={items} />
     </div>
   );
 }

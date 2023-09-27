@@ -1,5 +1,5 @@
 const { createContext } = require("react");
 
-const OrderContext = createContext({products: []});
+const OrderContext = createContext({items: []});
 
 export default OrderContext;
