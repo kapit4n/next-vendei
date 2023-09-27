@@ -1,5 +1,5 @@
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
-![Cart page](https://github.com/kapit4n/next-vendei/blob/main/assets/next-vendei-menu.png?raw=true)
+![Cart page](https://github.com/kapit4n/next-vendei/blob/main/assets/restaurant_menu.png?raw=true)
 
 # The plan
 ## Layout
