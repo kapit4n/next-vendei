@@ -26,8 +26,8 @@ const Items = ({ items }) => {
                         <h2>
                             {item.Product.name}
                         </h2>
-                        <div>{item.currentPrice}$</div>
-                        <button onClick={() => onUpdateOrderInfo(item)}>ORDER NOW</button>
+                        <div className='product-price'>{item.currentPrice}$</div>
+                        <button className='order-now-button' onClick={() => onUpdateOrderInfo(item)}>ORDER NOW</button>
                     </div>
                 ))}
             </div>
