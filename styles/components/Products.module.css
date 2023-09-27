@@ -1,0 +1,18 @@
+.itemList {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.item {
+    padding: 1rem;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item img {
+    height: 5rem;
+}
