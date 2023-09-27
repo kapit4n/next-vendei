@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from "next/link"
 import styles from "../styles/components/Footer.module.css"
 
 const Footer = () => {
@@ -6,7 +7,10 @@ const Footer = () => {
         <footer className={styles.footer}>
             <div className={styles.items}>
                 <button>
-                    Products
+                    <Link href={"/"}>Order</Link>
+                </button>
+                <button>
+                <Link href={"/order-products"}>Products</Link>
                 </button>
                 
                 <button>
