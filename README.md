@@ -4,10 +4,16 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 ## Layout
 - Main navbar
 - Perfil icon/image
-- icon cart
-- price value
+- Icon cart
+- Price value
 
 ## Menu
-- category tabs
-- list products
-- filter
+- Category tabs
+- List products
+- Filter
+
+# run tests
+npx cypress run
+
+# run the app
+npm run dev
