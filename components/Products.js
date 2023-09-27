@@ -1,14 +1,19 @@
 import { useContext } from 'react';
 import styles from '../styles/components/Products.module.css';
-import OrderContext from './OrderContext';
+import OrderContext from './context/OrderContext';
 
 
 const Products = ({ products }) => {
 
-    const { setOrderPrice } = useContext(OrderContext);
+    const { updateOrderInfo } = useContext(OrderContext);
 
-    const onChangeOrderPrice = (price) => {
-        setOrderPrice(prevVal => prevVal + price)
+    const onUpdateOrderInfo = (product) => {
+        updateOrderInfo(orderInfo => {
+            const newOrderInfo = {...orderInfo}
+            newOrderInfo.totalPrice = orderInfo.totalPrice + product.currentPrice
+            newOrderInfo.products = [...newOrderInfo.products, product]
+            return newOrderInfo
+        })
     }
 
     return (
@@ -17,12 +22,12 @@ const Products = ({ products }) => {
             <div className={styles.itemList}>
                 {products.map(product => (
                     <div className={styles.item}>
-                        <img src={product.img} />
+                        <img src={product.Product.img} />
                         <h2>
-                            {product.name}
+                            {product.Product.name}
                         </h2>
-                        <div>{product.price}$</div>
-                        <button onClick={() => onChangeOrderPrice(product.price)}>ORDER NOW</button>
+                        <div>{product.currentPrice}$</div>
+                        <button onClick={() => onUpdateOrderInfo(product)}>ORDER NOW</button>
                     </div>
                 ))}
             </div>
