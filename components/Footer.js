@@ -10,11 +10,11 @@ const Footer = () => {
                     <Link href={"/"}>Menu</Link>
                 </button>
                 <button>
-                <Link href={"/order-items"}>Items</Link>
+                    <Link href={"/order-items"}>Items</Link>
                 </button>
                 
                 <button>
-                    Categories
+                <Link href={"/categories"}>Categories</Link>
                 </button>
             </div>
         </footer>

@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import styles from '../styles/components/Items.module.css';
 import OrderContext from './context/OrderContext';
+import Image from 'next/image';
 
 
 const Items = ({ items }) => {
@@ -22,7 +23,7 @@ const Items = ({ items }) => {
             <div className={styles.itemList}>
                 {items.map(item => (
                     <div className={styles.item}>
-                        <img src={item.Product.img} />
+                        <Image src={`/images/${item.Product.img}`} width={150} height={150} />
                         <h2>
                             {item.Product.name}
                         </h2>
